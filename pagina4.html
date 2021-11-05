@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>pagina 3</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="javascript.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar-->
+        <div class="border-end bg-white" id="sidebar-wrapper">
+            <div class="sidebar-heading border-bottom bg-light">Meu sistema</div>
+            <div class="list-group list-group-flush">
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Salas</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Filmes</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="#!">Gerenciador</a>
+            </div>
+        </div>
+        <!-- Page content wrapper-->
+        <div id="page-content-wrapper">
+            <!-- Top navigation-->
+            <div class="topnav bg-light">
+                <a href="#home">Painel administrativo</a>
+                <a class="active" href="#about">Inicio</a>
+            </div>
+            <!-- Page content-->
+            <div class="container-fluid">
+                <a name="" id="" class="btn btn-primary" href="pagina3.html" role="button">Lista Filmes</a>
+                <a name="" id="" class="btn btn-primary" href="pagina5.html" role="button">Inserir Filmes</a>
+                <a name="" id="" class="btn btn-primary" href="pagina4.html" role="button">Atualizar Filmes</a>
+                <a name="" id="" class="btn btn-primary" href="pagina6.html" role="button">Remover Filme</a>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10">
+                    <p class="lead">Atualize o filme no DB</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-8">
+                    <form name="movie">
+                      <div class="form-group">
+                        <label for="SelectMovie">Selecione o filme</label>
+                        <select name='selectMovie' class="form-control">
+                            <option value=''>Nome filme</option>
+                        </select>
+                        
+                      </div>	
+                    
+                      <div class="form-group">
+                        <label for="MovieID">ID do filme</label>
+                      <output class="form-control" name="movieId" id="movieID" placeholder="Movie ID">
+                      </div>
+                      <div class="form-group">
+                        <label for="Title">Titulo</label>
+                        <input type="text" class="form-control" name="movieTitle" id="movieTitle" placeholder="Title">
+                      </div>
+                      <div class="form-group">
+                        <label for="ReleaseDate">Data de estreia</label>
+                        <input type="text" class="form-control" name='movieRelease' id="movieRelease" placeholder="Data de estreia">
+                      </div>
+                      <button type="submit" class="btn btn-primary" name='commit'>Save Changes</button>
+                    </form>
+                </div>
+            </div>
+            
+        </div>
+        
+        <script src="app/ctrl/initialize.js"></script>
+        <script src="app/model/movie.js"></script>
+        <script src="app/view/updateMovie.js"></script>
+        <script>
+            window.onload = function(){
+                mm.view.updateMovie.setupUserInterface();
+            }
+            window.onbeforeunload = function(){
+                alert("On Unload Event");
+                Movie.saveAll();	
+            }
+        </script>
+    </div>
+    </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+</body>
+
+</html>
