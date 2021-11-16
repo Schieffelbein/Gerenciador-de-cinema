@@ -3,6 +3,7 @@ function Movie(slots){
 	this.movieId = slots.movieId;
 	this.title = slots.title;
 	this.releaseDate = slots.releaseDate;
+	this.movieTime = slots.movieTime;
 }
 
 Movie.instances = {};
@@ -17,6 +18,7 @@ Movie.update = function(slots){
 	var movie = Movie.instances[slots.movieId];
 	movie.title == slots.title ? '' : movie.title = slots.title;
 	movie.releaseDate == slots.releaseDate ? '' : movie.releaseDate = slots.releaseDate;
+	movie.movieTime == slots.movieTime ? '' : movie.movieTime = slots.movieTime;
 	alert('Movie '+ slots.movieId +' Updated Successfully');
 }
 

@@ -11,6 +11,7 @@ mm.view.updateMovie = {
 			movie = Movie.instances[key];
 			optionEl = document.createElement('option');
 			optionEl.text = movie.title;
+			optionEl.text = movie.movieTime;
 			optionEl.value = movie.movieId;
 			selectMovieEl.add(optionEl, null);	
 		}
@@ -22,6 +23,7 @@ mm.view.updateMovie = {
 				formEl.movieId.value = movie.movieId;
 				formEl.movieTitle.value = movie.title;
 				formEl.movieRelease.value = movie.releaseDate; 	
+				formEl.movieTime.value = movie.movieTime;
 			}
 		});
 		
@@ -35,7 +37,8 @@ mm.view.updateMovie = {
 		slots = {
 			movieId: formEl.movieId.value,
 			title: formEl.movieTitle.value,
-			releaseDate: formEl.movieRelease.value
+			releaseDate: formEl.movieRelease.value,
+			movieTime: formEl.movieTime.value
 		}
 		
 		Movie.update(slots);
